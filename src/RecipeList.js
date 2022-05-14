@@ -11,24 +11,26 @@ function RecipeList({ recipes, setRecipes }) {
 
   const recipeList = recipes.map((item, index) => {
     return (
-      <tr key={index}>
-        <td>{item.name}</td>
-        <td>{item.cuisine}</td>
-        <td>
-          <img src={item.photo} alt="food" />
-        </td>
-        <td className="content_td">
-          <p>{item.ingredients}</p>
-        </td>
-        <td className="content_td">
-          <p>{item.preparation}</p>
-        </td>
-        <td>
-          <button onClick={() => deleteRecipe(item)} name="delete">
-            Delete
-          </button>
-        </td>
-      </tr>
+      <>
+        <tr key={index}>
+          <td>{item.name}</td>
+          <td>{item.cuisine}</td>
+          <td>
+            <img src={item.photo} alt="food" />
+          </td>
+          <td className="content_td">
+            <p>{item.ingredients}</p>
+          </td>
+          <td className="content_td">
+            <p>{item.preparation}</p>
+          </td>
+          <td>
+            <button onClick={() => deleteRecipe(item)} name="delete">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </>
     );
   });
 
