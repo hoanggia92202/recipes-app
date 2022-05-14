@@ -24,6 +24,8 @@ function RecipeCreate({ recipes, setRecipes }) {
   const submitHandler = (event) => {
     event.preventDefault();
     setRecipes([...recipes, userInput]);
+
+    /* clear input field */
     setUserInput({ ...initRecipe });
   };
 
